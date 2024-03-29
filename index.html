@@ -16,9 +16,17 @@
         }
         .name{
             height: 80px;
+            line-height: 80px;
             font-size: 3.6rem;
             margin-left: 20px;
         }
+        .name img{
+            width: 64px;
+            height: 64px;
+            line-height: 64px;
+            vertical-align: bottom;
+        }
+        
         .content{
             display: flex;
         }
@@ -30,7 +38,14 @@
         }
         .price{
             margin-left: 20px;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
+            flex: 1;
+        }
+        h3{
+            background-color: darkcyan;
+        }
+        h4{
+            margin-left: 20px;
         }
         .car{
             width: 78rem;
@@ -69,12 +84,28 @@
             left: 44%;
         }
         .detail_left{
-                flex: 7;
-                background-color:darkseagreen
-            }
-            .detail_right{
-                flex: 1;
-                background-color:dodgerblue
+            flex: 7;
+            background-color:darkseagreen
+        }
+        .detail_right{
+            flex: 1;
+            background-color:dodgerblue
+        }
+        .array_content{
+            font-size:1rem;
+            margin-left: 20px;
+        }
+        /* .array_content:hover{
+            border: 1px solid #ccc;
+        } */
+        .array_content button {
+                float: right;
+                margin-right: 10px;
+                border-radius: 6px;
+                /* background-color:coral; */
+                background-color:rgba(255, 204, 50);
+                color: #000;
+                padding: 5px 10px;
             }
         @media only screen and (max-width: 768px) {
             .content{
@@ -108,7 +139,9 @@
             .name{
                 font-size: 2.6rem;
                 height: 60px;
+                line-height: 60px;
             }
+            
             .content{
                 display: flex;
                 flex-direction: column;
@@ -119,15 +152,24 @@
                 flex-direction: row;
                 background-color: bisque;
             }
+            .price{
+                margin-left: 14px;
+                font-size: 1.6rem;
+                flex: 1;
+            }
+            .price p{
+                color: #e62021;
+            }
             .car{
                 width: 100%;
-                height: 250px;
+                overflow: hidden;
+                /*height: 250px;*/
+                height: 280px;
             }
             .car img{
-                width: 26.9rem;
+                width: 26.8rem;
                 object-fit: cover;
                 object-position: 20% 10%;
-                
             }
             .surround360_2{
                 position: relative;
@@ -137,29 +179,36 @@
                 width: 136px;
                 height: 50px;
                 bottom: 10px;
-                left: 33%;
+                left: 30%;
             }
-            
-            
+            .array{
+                font-size: 1.6rem;
+            }
+            .array_content{
+                font-size:1rem;
+                margin-left: 20px;
+            }
+   
         }
     </style>
     <title>360</title>
 </head>
 <body>
     <div>
-        <div class="name">奔驰AMG</div>
+        <!-- <div class="name">奔驰AMG</div> -->
+        <div class="name">
+            <img  src="https://p9-dcd.byteimg.com/img/tos-cn-i-dcdx/a2994c3b381f4abfba82e8ee7a372b38~tplv-resize:0:0.png"" alt="">
+            <span>小米汽车</span>
+        </div>
         <div class="content">
             <div class="left">
-                <div class="price">价格</div>
-                <div class="price">价格</div>
-                <div class="price">价格</div>
-                <div class="price">价格</div>
-                <div class="price">价格</div>
-                <div class="price">价格</div>
-                <div class="price">价格</div>
+                <div class="price">智驾款<p>21.59万</p></div>
+                <div class="price">智驾Pro款<p>24.59万</p></div>
+                <div class="price">智驾Max款<p>29.99万</p></div>               
             </div>
             <div class="car">
-                <div class="threesixty" data-path="images/iris-{index}.jpeg" data-count="36"></div>
+                <!-- <div class="threesixty" data-path="images/AMG/iris-{index}.jpeg" data-count="36"></div> -->
+                <div class="threesixty" data-path="images/MiCar/{index}.webp" data-count="28"></div>
                 <div class="surround360_2">
                     <div >
                         <img class="img" src="./label.png" alt="">
@@ -168,19 +217,64 @@
             </div>
             <div class="right">
                 <div class="array">配置:</div>
-                <div class="array">配置1</div>
-                <div class="array">配置2</div>
-                <div class="array">配置3</div>
-                <div class="array">配置4</div>
-                <div class="array">配置5</div>
+                <div class="array_content">2024款 后驱标准长续航智驾版<button>购买</button></div>
+                <div class="array_content">2024款 后驱超长续航高阶智驾Pro版<button>购买</button></div>
+                <div class="array_content">2024款 四驱超长续航高阶智驾Max版<button>购买</button></div>
+                <div class="array">参数:</div>
+                <div class="array_content">尺寸(长/宽/高/轴距-mm):<p>4997mm/1963mm/1455mm/3000mm</p></div>
+                <h4>对比同级:特斯拉Model 3</h4>
+                <div class="array_content">尺寸(长/宽/高/轴距-mm):<p>4720mm/1848mm/1442mm/2875mm</p></div>
+                <h4>对比同级:BYD 汉EV</h4>
+                <div class="array_content">尺寸(长/宽/高/轴距-mm):<p>4995mm/1910mm/1495mm/2920mm</p></div>
+                <h4>对比同级:小鹏P7</h4>
+                <div class="array_content">尺寸(长/宽/高/轴距-mm):<p>4888mm/1896mm/1450mm/2998mm</p></div>
+                <div class="array_content"><h3>智驾款:</h3>
+                    <p>299马力</p>
+                    <p>百公里加速:5.28</p>
+                    <p>驱动电机数:单电机</p>
+                    <p>变速箱:电动车单速变速箱</p>
+                    <p>车身结构:4门5座三厢车</p>
+                    <p>最大功率(kW):220(299Ps)</p>
+                    <p>最大扭矩(N·m):400</p>
+                    <h5>电池</h5>
+                    <p>电池类型:磷酸铁锂电池</p>
+                    <p>电池特色技术:刀片电池</p>
+                    <p>电芯品牌:弗迪</p>
+                    <p>电池容量(kWh):73.6</p>
+                </div>
+                <div class="array_content"><H3>Pro版:</H3>
+                    <p>299马力</p>
+                    <p>百公里加速:5.7s</p>
+                    <p>驱动电机数:单电机</p>
+                    <p>变速箱:电动车单速变速箱</p>
+                    <p>车身结构:4门5座三厢车</p>
+                    <p>最大功率(kW):220(299Ps)</p>
+                    <p>最大扭矩(N·m):400</p>
+                    <h5>电池</h5>
+                    <p>电池类型:磷酸铁锂电池</p>
+                    <p>电池特色技术:神行电池</p>
+                    <p>电芯品牌:宁德时代</p>
+                    <p>电池容量(kWh):94.3</p>
+                </div>
+                <div class="array_content"><H3>Max版:</H3>
+                    <p>673马力</p>
+                    <p>百公里加速:2.78s</p>
+                    <p>驱动电机数:双电机</p>
+                    <p>变速箱:电动车单速变速箱</p>
+                    <p>车身结构:4门5座三厢车</p>
+                    <p>最大功率(kW):495(673Ps)</p>
+                    <p>最大扭矩(N·m):838</p>
+                    <h5>电池</h5>
+                    <p>电池类型:三元锂电池</p>
+                    <p>电池特色技术:麒麟电池</p>
+                    <p>电芯品牌:宁德时代</p>
+                    <p>电池容量(kWh):101</p>
+                </div>
             </div>
         </div>
         <div class="surround360 flex">
-            <div class="flex1 kb_left">
-                
-            </div>
+            <div class="flex1 kb_left"></div>
             <!-- <img src="./label.png" alt=""> -->
-            
             <div class="flex1 kb_right"></div>
         </div>
         <div class="detail flex">    
